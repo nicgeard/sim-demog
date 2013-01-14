@@ -142,8 +142,8 @@ def plot_hh_size_dist(axes, hh_means, hh_stdev, max_size, comp_dat=None, comp_la
     legend_lines = []
     legend_labels = []
     if comp_dat is not None:    # plot data version
-        upper = min(len(comp_dat), max_size+1)
-        pb1 = axes.bar(np.arange(1,upper+1)-0.25, comp_dat[:upper],
+        upper = min(len(comp_dat), max_size)
+        pb1 = axes.bar(np.arange(1,upper)-0.25, comp_dat[1:upper],
                 width=0.25, color='k')
         legend_lines.append(pb1[0])
         legend_labels.append(comp_label)

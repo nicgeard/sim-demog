@@ -2,7 +2,7 @@ import os,sys
 import numpy as np
 from configobj import ConfigObj
 from validate import Validator
-import Image
+#import Image
 from math import exp,log
 from collections import defaultdict
 
@@ -16,15 +16,15 @@ def adjust_prob(prob, t_dur):
     return 1.0 - pow(1.0-prob, N)
 
 
-def create_thumbnail(filename, size):
-    im = Image.open(filename)
-    pathname = os.path.split(filename)
-    outpath = os.path.join(pathname[0], 'thumbnails')
-    create_path(outpath) 
-    outfile = os.path.splitext(pathname[1])[0] + '.thumbnail'
-    im.thumbnail(size, Image.ANTIALIAS)
-    im.save(os.path.join(outpath, outfile), "JPEG")
-    return os.path.join('thumbnails', outfile)
+#def create_thumbnail(filename, size):
+#    im = Image.open(filename)
+#    pathname = os.path.split(filename)
+#    outpath = os.path.join(pathname[0], 'thumbnails')
+#    create_path(outpath) 
+#    outfile = os.path.splitext(pathname[1])[0] + '.thumbnail'
+#    im.thumbnail(size, Image.ANTIALIAS)
+#    im.save(os.path.join(outpath, outfile), "JPEG")
+#    return os.path.join('thumbnails', outfile)
 
 
 def parse_params(filename='params.cfg', specfile='paramspec.cfg'):

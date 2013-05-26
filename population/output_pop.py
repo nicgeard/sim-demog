@@ -1,34 +1,34 @@
 import os, time, datetime
 from glob import glob
-from utils import load_probs, create_thumbnail
+from utils import load_probs #, create_thumbnail
 from data_processing_pop import *
 from plotting_pop import *
-from Cheetah.Template import Template
+#from Cheetah.Template import Template
 
-def output_html_report(sim, ofile='summary.html'):
-    figs = []
-    for infile in sorted(glob(os.path.join(sim.params['prefix'], '*.png'))):
-        figs.append({
-            'img': os.path.split(infile)[1], 
-            'thumb': create_thumbnail(infile, (256,256)),
-            'caption': ""})
-
-    # create output file using template
-    t = Template(file=os.path.join(sim.params['resource_prefix'], 
-        'output.tmpl'), 
-            searchList=[{
-                'params': sim.params, 
-                'images': figs, 
-                'time': {
-                    'begin': time.strftime("%a, %d %b %Y %H:%M:%S", 
-                        time.localtime(sim.start_time)),
-                    'end': time.strftime("%a, %d %b %Y %H:%M:%S", 
-                        time.localtime(sim.end_time)),
-                    'duration': datetime.timedelta(
-                        seconds=sim.end_time-sim.start_time)}}])
-    ofile = open(os.path.join(sim.params['prefix'], ofile), 'w')
-    print >> ofile, t
-    ofile.close()
+#def output_html_report(sim, ofile='summary.html'):
+#    figs = []
+#    for infile in sorted(glob(os.path.join(sim.params['prefix'], '*.png'))):
+#        figs.append({
+#            'img': os.path.split(infile)[1], 
+#            'thumb': create_thumbnail(infile, (256,256)),
+#            'caption': ""})
+#
+#    # create output file using template
+#    t = Template(file=os.path.join(sim.params['resource_prefix'], 
+#        'output.tmpl'), 
+#            searchList=[{
+#                'params': sim.params, 
+#                'images': figs, 
+#                'time': {
+#                    'begin': time.strftime("%a, %d %b %Y %H:%M:%S", 
+#                        time.localtime(sim.start_time)),
+#                    'end': time.strftime("%a, %d %b %Y %H:%M:%S", 
+#                        time.localtime(sim.end_time)),
+#                    'duration': datetime.timedelta(
+#                        seconds=sim.end_time-sim.start_time)}}])
+#    ofile = open(os.path.join(sim.params['prefix'], ofile), 'w')
+#    print >> ofile, t
+#    ofile.close()
     
 
 

@@ -1,7 +1,12 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 from math import ceil, sqrt, log
+
+# force headless backend & turn off interactive plotting
+matplotlib.use('Agg')
+plt.ioff()
 
 hh_2006_data = {}
 hh_2006_data['couple_kids'] = [3.34900107726146, 39.0447660216951, 65.3322624325251, 54.7447775052008, 24.9479982067538, 10.6951330955173, 5.22968378587565]

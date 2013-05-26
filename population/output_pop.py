@@ -1,6 +1,6 @@
 import os, time, datetime
 from glob import glob
-from utils.utils import load_probs, create_thumbnail
+from utils import load_probs, create_thumbnail
 from data_processing_pop import *
 from plotting_pop import *
 from Cheetah.Template import Template

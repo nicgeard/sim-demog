@@ -6,10 +6,10 @@ from __future__ import absolute_import
 import itertools
 import cPickle as pickle
 import gzip
-from population.pop_base import Population
-from population.individual import Individual
-from population.household import Household
-from utils.utils import sample_table, split_age_probs 
+from pop_base import Population
+from individual import Individual
+from household import Household
+from utils import sample_table, split_age_probs 
 
 class Pop_HH(Population):
     """

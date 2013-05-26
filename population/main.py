@@ -4,7 +4,7 @@ A stub for testing/evaluating dynamic demography simulations.
 
 import cPickle as pickle
 import sys, os 
-from utils.utils import parse_params, create_path
+from utils import parse_params, create_path
 from data_processing_pop import *
 from plotting_pop import *
 from output_pop import *

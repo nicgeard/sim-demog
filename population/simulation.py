@@ -3,9 +3,9 @@ import time, os
 import numpy as np
 from random import Random
 from math import exp
-from population.pop_hh import Pop_HH
-from population.individual import Individual
-from utils.utils import sample_table, adjust_prob, load_probs, load_probs_new, load_age_rates, load_prob_tables, load_prob_list
+from pop_hh import Pop_HH
+from individual import Individual
+from utils import sample_table, adjust_prob, load_probs, load_probs_new, load_age_rates, load_prob_tables, load_prob_list
 
 
 """

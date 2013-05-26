@@ -4,8 +4,8 @@ The base class for a population.
 from __future__ import absolute_import
 import numpy as np
 import itertools
-from population.individual import Individual
-from utils.utils import sample_table
+from individual import Individual
+from utils import sample_table
 from collections import defaultdict
 
 class Population(object):

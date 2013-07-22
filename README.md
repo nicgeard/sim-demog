@@ -8,4 +8,4 @@ Computational simulation model of population with demography.
 
 To run the test case, from 'test', execute 'python ../population/main.py'; a population of c10,000 will be simulated for 200 years, and data plots written to an 'output' subdirectory.
 
-Python libraries required (debian package names) include: python-numpy, python-matplotlib, python cheetah and python-imaging
+Python libraries required (debian package names) include: python-configobj, python-numpy, python-matplotlib, python cheetah and python-imaging
